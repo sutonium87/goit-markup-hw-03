@@ -11,7 +11,7 @@
   --brand-letter-spacing: 0.06em;
 }
 body {
-  background-color: #e5e5e5;
+  background-color: var(--brand-color-white);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -20,11 +20,34 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
 }
+.container {
+  width: 1700px;
+  margin: 0px auto;
+}
+img {
+  display: block;
+}
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
 .top-line-section {
-  margin: 0px;
+  border-bottom: 1px solid #ececec;
+}
+.top-line-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  border: 1px solid #ececec;
+}
+.top-line-left-side {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  align-items: center;
+  margin-left: 215px;
 }
 .top-line-logo {
   font-family: "Raleway";
@@ -36,7 +59,6 @@ body {
   text-decoration: none;
   margin-top: 24px;
   margin-bottom: 25px;
-  margin-left: 215px;
 }
 .top-line-logo-studio {
   color: var(--brand-color-black);
@@ -46,8 +68,6 @@ body {
   justify-content: space-between;
   gap: 50px;
   align-items: center;
-  margin-left: 93px;
-  padding-inline-start: 0px;
 }
 .top-line-navigation-option {
   font-weight: var(--brand-font-weight);
@@ -57,10 +77,9 @@ body {
   text-decoration: none;
 }
 .top-line-telecommunication-container {
-  margin-left: 385px;
-}
-.top-line-telecommunication-telefon-element {
-  margin-left: 40px;
+  display: flex;
+  gap: 40px;
+  margin-right: 215px;
 }
 .top-line-telecommunication {
   font-weight: var(--brand-font-weight);
@@ -72,6 +91,11 @@ body {
 .head-section {
   background-color: var(--brand-color-gray);
 }
+.head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .head-title {
   font-weight: 900;
   font-size: 44px;
@@ -80,7 +104,7 @@ body {
   letter-spacing: var(--brand-letter-spacing);
   text-transform: uppercase;
   color: var(--brand-color-white);
-  padding: 200px 452px 0 452px;
+  padding: 200px 440px 0 440px;
 }
 .head-request-button {
   font-weight: 700;
@@ -92,18 +116,17 @@ body {
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  margin: 40px 681px 200px 680px;
+  margin: 40px auto 200px auto;
   padding: 10px 19px 10px 20px;
 }
 .group-one-section {
-  margin: 94px 215px;
+  padding: 0 265px;
 }
 .group-one-container,
 .what-we-do-container {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  padding-inline-start: 0px;
 }
 .group-one-section h3 {
   font-weight: 700;
@@ -119,7 +142,8 @@ body {
   color: var(--brand-color-gray-light);
 }
 .what-we-do-section {
-  margin: 94px 215px;
+  padding: 0 265px;
+  padding-bottom: 94px;
 }
 .what-we-do-section h3,
 .our-team-section h3 {
@@ -133,18 +157,15 @@ body {
   padding: 0px 485px 50px 485px;
 }
 .our-team-section {
+  padding-bottom: 94px;
   background-color: var(--brand-color-ghost);
 }
 .our-team-container {
+  padding: 0 265px;
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  margin: 0px 215px;
-  padding-bottom: 94px;
-  padding-inline-start: 0px;
-}
-.our-team-section h3 {
-  padding: 94px 717px 50px 717px;
+  padding-top: 50px;
 }
 .our-team-card {
   background-color: var(--brand-color-white);
@@ -166,6 +187,8 @@ body {
 }
 .basement-section {
   background: var(--brand-color-gray);
+}
+.basement-section-container {
   padding: 60px 1154px 60px 215px;
 }
 .basement-logo {
@@ -186,7 +209,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
-  padding-inline-start: 0px;
   margin-top: 28px;
 }
 .basement-address-location {
@@ -204,8 +226,8 @@ body {
 .basement-logo-studio {
   color: var(--brand-color-white);
 }
-.portofolio-section {
-  padding: 94px 215px;
+.portofolio-section{
+  margin-bottom: 94px;
 }
 .portofolio-filtering-tabs-container {
   display: flex;
@@ -228,10 +250,11 @@ body {
   padding: 6px 22px;
 }
 .portofolio-projects-container {
+  padding: 0 265px;
+  margin-bottom: 94px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 0px;
 }
 .portofolio-projects-item {
   box-sizing: border-box;
@@ -250,6 +273,9 @@ body {
 .portofolio-project-category {
   line-height: 1.875;
   padding: 0px 24px 20px;
+}
+.section {
+  padding-top: 94px;
 }
 .list-item {
   list-style: none;
@@ -274,19 +300,4 @@ body {
 .head-request-button:focus {
   color: var(--brand-color-blue);
   background-color: var(--brand-color-white);
-}
-/* Positioning styles general */
-.container {
-  width: 1600px;
-  background-color: var(--brand-color-white);
-  margin: auto;
-}
-* {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-img {
-  display: block;
 }
